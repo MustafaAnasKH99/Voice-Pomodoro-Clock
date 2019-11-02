@@ -5,9 +5,8 @@ function SetTimer(props) {
   return (
     <div>
         <code>SetTimer ..</code>
-        {minutes}
         <br />
-        <input placeholder="Set Seconds" onChange={(e) => handleChange(e.target.value)}/>
+        <input type="text" pattern="[0-9]*" placeholder="Set Minutes" onChange={(e) => handleChange(e.target)}/>
     </div>
   );
 }

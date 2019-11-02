@@ -3,7 +3,7 @@ import React from 'react';
 function StartTimer() {
   return (
     <div>
-        <code>StartTimer ..</code>
+        <button>Start Timer</button>
     </div>
   );
 }

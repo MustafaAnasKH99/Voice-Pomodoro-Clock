@@ -11,7 +11,9 @@ function App() {
   const [ seconds, setSeconds ] = useState(0)
 
   const handleChange = (e) => {
-    setMinutes(e)
+    if(e.validity.valid){
+      e.value === '' ? setMinutes(0) : setMinutes(e.value)
+    }
   }
 
   return (

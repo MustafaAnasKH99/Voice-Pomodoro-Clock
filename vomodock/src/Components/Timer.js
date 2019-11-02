@@ -1,9 +1,11 @@
 import React from 'react';
 
-function Timer() {
+function Timer(props) {
+  const { seconds, minutes } = props
   return (
     <div>
-        <code>Timer ..</code>
+        <code>{minutes}</code>
+        <code>:{seconds}</code>
     </div>
   );
 }
