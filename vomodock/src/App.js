@@ -16,11 +16,19 @@ function App() {
     }
   }
 
+  const startCountDown = async () => {
+    setSeconds(59)
+    setInterval(function(){
+      setSeconds(prev => prev - 1)
+      console.log(seconds)
+    }, 1000)
+  }
+
   return (
     <div className="App">
         <SetTimer minutes={minutes} handleChange={handleChange}/>
         <Timer seconds={seconds} minutes={minutes} />
-        <StartTimer />
+        <StartTimer startCountDown={startCountDown}/>
     </div>
   );
 }

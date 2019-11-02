@@ -1,9 +1,10 @@
 import React from 'react';
 
-function StartTimer() {
+function StartTimer(props) {
+  const { startCountDown } = props
   return (
     <div>
-        <button>Start Timer</button>
+        <button onClick={() => startCountDown()}>Start Timer</button>
     </div>
   );
 }
